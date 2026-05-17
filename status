@@ -2,5 +2,8 @@
 get_date=$(date +"%Y/%m/%d")
 get_time=$(date +"%H:%M")
 get_net=$(networkctl | grep -q routable && echo "wired" || echo "not wired")
+get_vol_device=$(pactl get-default-sink NAME)
+get_vol=$(pactl get-sink-volume $get_vol_device | grep -w "Volume:" | cut -d "/" -f 2)
+get_brightness=$(ddcutil getvcp 10 | awk -F'current value *= *|,' '{print $2}')
 
-echo "$get_net :: $get_date :: $get_time "
+echo "$get_brightness% ::$get_vol:: $get_net :: $get_date :: $get_time "
