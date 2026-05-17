@@ -1,1 +1,1 @@
-[](scripts.png)
+![](scripts.png)
