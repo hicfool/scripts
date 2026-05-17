@@ -3,4 +3,4 @@ get_date=$(date +"%Y/%m/%d")
 get_time=$(date +"%H:%M")
 get_net=$(networkctl | grep -q routable && echo "wired" || echo "not wired")
 
-echo "$get_net • $get_date • $get_time "
+echo "$get_net :: $get_date :: $get_time "
