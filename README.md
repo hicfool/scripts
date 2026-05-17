@@ -1,1 +1,1 @@
-![](scripts.png)
+![](photo.png)
