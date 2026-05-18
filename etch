@@ -14,6 +14,7 @@ $GREEN$(uname -m)
 $PURPLE$(uname -r)
 $BLUE$XDG_CURRENT_DESKTOP$WHITE
 :::::::::::::
-Mem: $ORANGE$(free -h --giga | grep "Mem:" | cut -d " " -f 22)$WHITE/$ORANGE$(free -h --giga | grep "Mem:" | cut -d " " -f 14)
+Mem: $ORANGE$(free -h --giga | grep "Mem:" | cut -d " " -f 22)$WHITE/$RED$(free -h --giga | grep "Mem:" | cut -d " " -f 14)$WHITE
+Pac: $GREEN$(pacman -Q | wc -l)
 $WHITE
 "
