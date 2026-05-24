@@ -1,7 +1,7 @@
 #!/bin/sh
-get_date=$(date +"%Y/%m/%d")
+get_date=$(date +"%d/%m/%Y")
 get_time=$(date +"%H:%M")
-get_net=$(networkctl | grep -q routable && echo "wired" || echo "not wired")
+get_net=$(networkctl | grep -q routable && echo "<span foreground='#a3be8c'>wired</span>" || echo "<span foreground='#bf616a'>not wired</span>")
 get_vol=$(pactl get-sink-volume $(pactl get-default-sink NAME) | grep -w "Volume:" | cut -d "/" -f 2)
 
 echo "$get_vol $get_net  $get_date  $get_time -"
