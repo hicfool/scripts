@@ -4,4 +4,4 @@ get_time=$(date +"%H:%M")
 get_net=$(networkctl | grep -q routable && echo "wired" || echo "not wired")
 get_vol=$(pactl get-sink-volume $(pactl get-default-sink NAME) | grep -w "Volume:" | cut -d "/" -f 2)
 
-echo "$get_vol $get_net  $get_date  $get_time"
+echo "$get_vol $get_net  $get_date  $get_time -"
