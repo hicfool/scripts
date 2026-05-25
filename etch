@@ -30,4 +30,4 @@ do
     echo -e "$SPECIAL|"
 done
 
-tput cup 12 0  && echo -e "$WHITE"
+tput cup 13 0  && echo -e "$WHITE"
