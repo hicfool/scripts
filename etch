@@ -10,24 +10,23 @@ PURPLE="\033[0;35m"
 clear
 
 echo -e "
-$GRAY+---------------------------+
-$GRAY|                           |
-$GRAY|            $BLUE$USER$WHITE@$RED$HOSTNAME
-$GRAY|$WHITE    (\,/)   $GREEN$(uname) $(uname -m)
-$GRAY|$WHITE   (. . )   $PURPLE$(uname -r)
-$GRAY|$WHITE  (+)~(+)o  $BLUE$XDG_CURRENT_DESKTOP
-$GRAY|                           |
-$GRAY+---------------------------+
-$GRAY|$WHITE  Mem: $ORANGE$(free -h --giga | grep "Mem:" | cut -d " " -f 22)$WHITE/$RED$(free -h --giga | grep "Mem:" | cut -d " " -f 14)
-$GRAY|$WHITE  Pac: $GREEN$(pacman -Q | wc -l)
-$GRAY+---------------------------+
-$WHITE
+$GRAY   +---------------------------+
+$GRAY   |                           |
+$GRAY   |            $BLUE$USER$WHITE@$RED$HOSTNAME
+$GRAY   |$WHITE    (\,/)   $GREEN$(uname) $(uname -m)
+$GRAY   |$WHITE   (. . )   $PURPLE$(uname -r)
+$GRAY   |$WHITE  (+)~(+)o  $BLUE$XDG_CURRENT_DESKTOP
+$GRAY   |                           |
+$GRAY   +---------------------------+
+$GRAY   |$WHITE  Mem: $ORANGE$(free -h --giga | grep "Mem:" | cut -d " " -f 22)$WHITE/$RED$(free -h --giga | grep "Mem:" | cut -d " " -f 14)
+$GRAY   |$WHITE  Pac: $GREEN$(pacman -Q | wc -l)
+$GRAY   +---------------------------+
 "
 
-tput cup 3  28 && echo -e "$GRAY|"
-tput cup 4  28 && echo -e "$GRAY|"
-tput cup 5  28 && echo -e "$GRAY|"
-tput cup 6  28 && echo -e "$GRAY|"
-tput cup 9  28 && echo -e "$GRAY|"
-tput cup 10 28 && echo -e "$GRAY|"
+tput cup 3  31 && echo -e "$GRAY|"
+tput cup 4  31 && echo -e "$GRAY|"
+tput cup 5  31 && echo -e "$GRAY|"
+tput cup 6  31 && echo -e "$GRAY|"
+tput cup 9  31 && echo -e "$GRAY|"
+tput cup 10 31 && echo -e "$GRAY|"
 tput cup 12 0  && echo -e "$WHITE"
