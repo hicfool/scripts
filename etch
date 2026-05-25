@@ -23,5 +23,14 @@ $GRAY   |$WHITE  Pac: $GREEN$(pacman -Q | wc -l)
 $GRAY   +---------------------------+
 "
 
-for i in $(seq 3 10); do tput cup $i 31 && echo -e "$GRAY|"; done
+for i in $(seq 3 10)
+do
+    tput cup $i 31
+    if [ $i -eq 8 ]; then
+        echo -e "$GRAY+"
+    else
+        echo -e "$GRAY|"
+    fi
+done
+
 tput cup 12 0  && echo -e "$WHITE"
