@@ -19,7 +19,7 @@ $SPECIAL   |$WHITE -''w--:|       $BLUE$XDG_CURRENT_DESKTOP
 $SPECIAL   |$WHITE         '      $PURPLE$TERM
 $SPECIAL   |
 $SPECIAL   |==============================
-$SPECIAL   |$WHITE Mem: $ORANGE$(free -h --giga | grep "Mem:" | cut -d " " -f 22)$WHITE/$RED$(free -h --giga | grep "Mem:" | cut -d " " -f 14)
+$SPECIAL   |$WHITE Mem: $ORANGE$(free -h --giga | grep -Po "Mem:\s+\S+\s+\K\S+")$WHITE/$RED$(free -h --giga | grep -Po "Mem:\s+\K\S+")
 $SPECIAL   |$WHITE Pac: $GREEN$(pacman -Q | wc -l)
 $SPECIAL   '=============================='
 "
