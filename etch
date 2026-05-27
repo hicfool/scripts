@@ -8,26 +8,13 @@ PURPLE="\033[0;35m"
 SPECIAL="\033[37;5m"
 
 clear
-
 echo -e "
-$SPECIAL   .==============================.
-$SPECIAL   |
-$SPECIAL   |$WHITE \      (_,_)   $BLUE$USER$WHITE@$RED$HOSTNAME
-$SPECIAL   |$WHITE  '---_.(,o o)  $GREEN$(uname) $(uname -m)
-$SPECIAL   |$WHITE  |     .-('_') $ORANGE$(uname -r)
-$SPECIAL   |$WHITE -''w--:|       $BLUE$XDG_CURRENT_DESKTOP
-$SPECIAL   |$WHITE         '      $PURPLE$TERM
-$SPECIAL   |
-$SPECIAL   |==============================
-$SPECIAL   |$WHITE Mem: $ORANGE$(free -h --giga | grep -Po "Mem:\s+\S+\s+\K\S+")$WHITE/$RED$(free -h --giga | grep -Po "Mem:\s+\K\S+")
-$SPECIAL   |$WHITE Pac: $GREEN$(pacman -Q | wc -l)
-$SPECIAL   '=============================='
+$SPECIAL \      (_,_)   $BLUE$USER$WHITE@$RED$HOSTNAME
+$SPECIAL  '---_.(,o o)  $GREEN$(uname) $(uname -m)
+$SPECIAL  |     .-('.') $ORANGE$(uname -r)
+$SPECIAL .''w--:|       $BLUE$XDG_CURRENT_DESKTOP
+$SPECIAL   '  .  '      $PURPLE$TERM
+
+$WHITE Mem: $ORANGE$(free -h --giga | grep -Po "Mem:\s+\S+\s+\K\S+")$WHITE / $RED$(free -h --giga | grep -Po "Mem:\s+\K\S+")
+$WHITE Pac: $GREEN$(pacman -Q | wc -l)$WHITE
 "
-
-for i in $(seq 2 11)
-do
-    tput cup $i 34
-    echo -e "$SPECIAL|"
-done
-
-tput cup 13 0  && echo -e "$WHITE"
