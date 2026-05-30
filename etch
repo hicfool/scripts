@@ -15,6 +15,6 @@ $SPECIAL  |     .-('.') $ORANGE$(uname -r)
 $SPECIAL .''w--:|       $BLUE$XDG_CURRENT_DESKTOP
 $SPECIAL   '  .  '      $PURPLE$TERM
 
-$WHITE Mem: $ORANGE$(free -h --giga | grep -Po "Mem:\s+\S+\s+\K\S+")$WHITE / $RED$(free -h --giga | grep -Po "Mem:\s+\K\S+")
-$WHITE Pac: $GREEN$(pacman -Q | wc -l)$WHITE
+$WHITE mem: $ORANGE$(free -h --giga | grep -Po "Mem:\s+\S+\s+\K\S+")$WHITE / $RED$(free -h --giga | grep -Po "Mem:\s+\K\S+")
+$WHITE pac: $GREEN$(pacman -Q | wc -l)$WHITE
 "
