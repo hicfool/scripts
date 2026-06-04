@@ -8,15 +8,15 @@ GREEN="\033[0;32m"
 ORANGE="\033[0;33m"
 BLUE="\033[0;34m"
 PURPLE="\033[0;35m"
-BLINK="\033[0;5m"
+COW="\033[5;31m\033[3;31m"
 
 clear
 echo -e "
-$BLINK \      (_,_)   $BLUE$USER$WHITE@$RED$HOSTNAME
-$BLINK  '---_.(,o o)  $GREEN$(uname) $(uname -m)
-$BLINK  |     .-('.') $ORANGE$(uname -r)
-$BLINK .''w--:|       $BLUE$XDG_CURRENT_DESKTOP
-$BLINK   '  .  '      $PURPLE$TERM
+$COW \      (_,_)   $BLUE$USER$WHITE@$RED$HOSTNAME
+$COW  '---_.(,o o)  $GREEN$(uname) $(uname -m)
+$COW  |     .-('.') $ORANGE$(uname -r)
+$COW .''w--:|       $BLUE$XDG_CURRENT_DESKTOP
+$COW   '  .  '      $PURPLE$TERM
 
 $WHITE" mem" $ORANGE$(free -h --giga | grep -Po "Mem:\s+\S+\s+\K\S+")$WHITE / $RED$(free -h --giga | grep -Po "Mem:\s+\K\S+")
 $WHITE" pac" $GREEN$(pacman -Q | wc -l)$WHITE
