@@ -3,7 +3,7 @@
 dt=$(date +'%Y%m%d%H%M%S'"_print.png")
 
 if [[ "$1" == "-s" ]]; then
-    grim -g "$(slurp)" ~/Pictures/Prints/$dt; sleep 0.01; wl-copy < ~/Pictures/Prints/$dt
+    grim -g "$(slurp)" $HOME/pictures/prints/$dt; sleep 0.01; wl-copy < $HOME/pictures/prints/$dt
 else
-    grim ~/Pictures/Prints/$dt; sleep 0.01; wl-copy < ~/Pictures/Prints/$dt
+    grim $HOME/pictures/prints/$dt; sleep 0.01; wl-copy < $HOME/pictures/prints/$dt
 fi
