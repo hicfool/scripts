@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # etch - A simple system fetch.
 
@@ -19,5 +19,5 @@ $COW .''w--:|       $BLUE$XDG_CURRENT_DESKTOP
 $COW   '  .  '      $PURPLE$TERM
 
 $WHITE" mem" $ORANGE$(free -h --giga | grep -Po "Mem:\s+\S+\s+\K\S+")$WHITE / $RED$(free -h --giga | grep -Po "Mem:\s+\K\S+")
-$WHITE" pac" $GREEN$(pacman -Q | wc -l)$WHITE
+$WHITE" pac" $GREEN$(dpkg --get-selections | grep -v deinstall | wc -l)$WHITE
 "
